@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+.prose-custom {
+  @apply max-w-none text-slate-800;
+}
+
+.prose-custom h1,
+.prose-custom h2,
+.prose-custom h3,
+.prose-custom h4 {
+  @apply mt-8 text-slate-900;
+}
+
+.prose-custom h1 {
+  @apply text-3xl font-bold;
+}
+
+.prose-custom h2 {
+  @apply text-2xl font-semibold;
+}
+
+.prose-custom p,
+.prose-custom ul,
+.prose-custom ol {
+  @apply mt-4 leading-7;
+}
+
+.prose-custom a {
+  @apply text-brand underline;
+}
+
+.prose-custom strong {
+  @apply font-semibold text-slate-900;
+}
+
+.prose-custom ul,
+.prose-custom ol {
+  @apply pl-6;
+}
+
+.prose-custom ul {
+  @apply list-disc;
+}
+
+.prose-custom ol {
+  @apply list-decimal;
+}
