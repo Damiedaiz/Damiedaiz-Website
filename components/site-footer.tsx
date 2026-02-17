@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { siteConfig } from '@/lib/site-config';
+import { siteConfig } from '@/src/config/site';
 
 export function SiteFooter() {
   return (

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllPostsMeta } from '@/lib/blog';
-import { siteConfig } from '@/lib/site-config';
+import { siteConfig } from '@/src/config/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ['', '/start-here', '/work-with-me', '/systems-starter-kit', '/thank-you', '/blog', '/about', '/contact'];
