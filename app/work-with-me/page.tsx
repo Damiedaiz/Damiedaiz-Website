@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { PageShell } from '@/components/page-shell';
 import { siteConfig } from '@/lib/site-config';
 
@@ -33,8 +34,7 @@ export default function WorkWithMePage() {
     <PageShell>
       <h1 className="text-4xl font-bold">Work With Me</h1>
       <p className="mt-3 max-w-3xl text-slate-700">
-        Choose the support level that matches your stage. Every option is designed to help you execute consistently,
-        reduce bottlenecks, and produce outcomes you can measure.
+        Pick the offer ladder level that matches your speed, capacity, and desired support.
       </p>
       <div className="mt-8 grid gap-5 md:grid-cols-3">
         {offers.map((offer) => (
@@ -49,14 +49,9 @@ export default function WorkWithMePage() {
                 <li key={d}>{d}</li>
               ))}
             </ul>
-            <a
-              href={siteConfig.calendlyUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-5 inline-block rounded-lg bg-brand px-4 py-2 font-semibold text-white"
-            >
+            <Link href={siteConfig.calendlyUrl} className="mt-5 inline-block rounded-lg bg-brand px-4 py-2 font-semibold text-white">
               Book a Clarity Call
-            </a>
+            </Link>
           </article>
         ))}
       </div>

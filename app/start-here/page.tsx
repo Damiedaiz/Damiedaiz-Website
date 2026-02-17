@@ -13,14 +13,14 @@ export default function StartHerePage() {
     <PageShell>
       <h1 className="text-4xl font-bold">Start Here</h1>
       <p className="mt-3 max-w-3xl text-slate-700">
-        If you feel overwhelmed by tools, inconsistent execution, or unclear priorities, follow this simple path and
-        start seeing traction quickly.
+        If you are overwhelmed by tools, inconsistent execution, or unclear priorities, this page gives you a clear
+        first path.
       </p>
       <div className="mt-8 grid gap-4 md:grid-cols-3">
         {[
-          '1) Get the free Systems Starter Kit and set up your weekly planning rhythm.',
-          '2) Apply one workflow map to your lead generation or delivery process.',
-          '3) Book a clarity call when you need a custom architecture plan.'
+          'Who this is for: entrepreneurs and beginners building structure.',
+          'Step 1: define your weekly operating rhythm and outcomes.',
+          'Step 2: map one core workflow before adding automation.'
         ].map((item) => (
           <div key={item} className="rounded-xl border border-slate-200 bg-white p-4">
             {item}

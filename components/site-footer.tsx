@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { siteConfig } from '@/lib/site-config';
 
 export function SiteFooter() {
@@ -6,12 +7,8 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-10 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} Damiedaiz. Systems, structure, outcomes.</p>
         <div className="flex gap-4">
-          <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">
-            Book a Clarity Call
-          </a>
-          <a href={siteConfig.whatsappUrl} target="_blank" rel="noreferrer">
-            WhatsApp
-          </a>
+          <Link href={siteConfig.calendlyUrl}>Book a Clarity Call</Link>
+          <Link href={siteConfig.whatsappUrl}>WhatsApp</Link>
         </div>
       </div>
     </footer>
