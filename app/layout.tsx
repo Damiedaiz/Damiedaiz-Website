@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { siteConfig } from '@/lib/site-config';
+import { siteConfig } from '@/src/config/site';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { AnalyticsPlaceholder } from '@/components/analytics-placeholder';

@@ -28,7 +28,6 @@ export async function submitStarterKitLead(
   });
 
   redirect('/thank-you');
-  return { success: true, message: 'Submitted.' };
 }
 
 export async function submitContactLead(_: LeadFormState, formData: FormData): Promise<LeadFormState> {
@@ -40,12 +39,16 @@ export async function submitContactLead(_: LeadFormState, formData: FormData): P
     return { success: false, message: 'Please fill every required field.' };
   }
 
-  await sendLeadNotification({
-    name,
-    email,
-    source: 'contact-form',
-    whatsapp: `Message: ${message}`
-  });
+  try {
+    await sendLeadNotification({
+      name,
+      email,
+      source: 'contact-form',
+      whatsapp: `Message: ${message}`
+    });
+  } catch (error) {
+    console.error('[contact-form:notification-error]', error);
+  }
 
   return { success: true, message: 'Thanks. Your message has been sent.' };
 }

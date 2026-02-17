@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageShell } from '@/components/page-shell';
-import { siteConfig } from '@/lib/site-config';
+import { siteConfig } from '@/src/config/site';
 
 export const metadata: Metadata = {
   title: 'Thank You',

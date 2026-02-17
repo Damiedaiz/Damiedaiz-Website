@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { CtaButtons } from '@/components/cta-buttons';
 import { PageShell } from '@/components/page-shell';
 import { getAllPostsMeta } from '@/lib/blog';
-import { siteConfig } from '@/lib/site-config';
+import { siteConfig } from '@/src/config/site';
 
 export default function HomePage() {
   const posts = getAllPostsMeta().slice(0, 3);

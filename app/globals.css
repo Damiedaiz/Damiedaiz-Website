@@ -11,5 +11,20 @@ body {
 }
 
 .prose-custom {
-  @apply prose prose-slate max-w-none prose-headings:text-slate-900 prose-a:text-brand prose-strong:text-slate-900;
+  @apply max-w-none text-slate-700;
+}
+
+.prose-custom h1,
+.prose-custom h2,
+.prose-custom h3,
+.prose-custom h4 {
+  @apply text-slate-900;
+}
+
+.prose-custom a {
+  @apply text-brand underline;
+}
+
+.prose-custom strong {
+  @apply text-slate-900;
 }

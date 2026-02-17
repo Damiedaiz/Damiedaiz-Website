@@ -31,24 +31,39 @@ npm run typecheck
 npm run build
 ```
 
-## Environment variables
+## Vercel Deployment Setup
 
-Copy `.env.example` to `.env.local` and fill values:
+The app is safe to build even if no environment variables are configured. Every value has a fallback in `src/config/site.ts`.
 
-- `RESEND_API_KEY` - Optional. If absent, submissions log to server output.
-- `LEAD_FROM_EMAIL` - Sender address for notification emails.
-- `LEAD_TO_EMAIL` - Inbox to receive leads.
+### Required env vars
 
-## Deploy to Vercel
+None are strictly required for a successful Vercel build or deployment.
+
+### Optional env vars
+
+| Variable | Example value | Where used |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_DOMAIN` | `https://damiedaiz.com` | Canonical/SEO URLs in metadata, `robots`, and sitemap generation. |
+| `NEXT_PUBLIC_CALENDLY_URL` | `https://calendly.com/damiedaiz/clarity-call` | CTA links (header/footer/pages). |
+| `NEXT_PUBLIC_WHATSAPP_URL` | `https://wa.me/15551234567` | Contact and footer WhatsApp links. |
+| `NEXT_PUBLIC_DAIZSIGN_URL` | `https://daizsign.com` | Ecosystem link on home page. |
+| `NEXT_PUBLIC_DAIZCLOU_URL` | `https://daizclou.com` | Ecosystem link on home page. |
+| `NEXT_PUBLIC_SSA_URL` | `https://ssa.example.com` | Ecosystem link on home page. |
+| `NEXT_PUBLIC_OPMMA_URL` | `https://opmma.example.com` | Ecosystem link on home page. |
+| `RESEND_API_KEY` | `re_xxxxxxxxx` | Server-side email provider key for lead notifications. |
+| `LEAD_FROM_EMAIL` | `Damiedaiz Leads <onboarding@resend.dev>` | Sender email for notification emails. |
+| `LEAD_TO_EMAIL` | `owner@example.com` | Inbox for lead notifications and fallback owner email. |
+
+### Deploy to Vercel
 
 1. Push repository to GitHub.
-2. Import into Vercel.
-3. Set environment variables in project settings.
+2. Import the repo into Vercel.
+3. (Optional) Add any environment variables from `.env.example`.
 4. Deploy.
 
 ## Content and config
 
-- Centralized brand and link config: `lib/site-config.ts`
+- Centralized app configuration: `src/config/site.ts`
 - Blog posts: `content/posts/*.mdx`
 - Lead forms:
   - Systems Starter Kit: `/systems-starter-kit`
