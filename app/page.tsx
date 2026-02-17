@@ -53,15 +53,9 @@ export default function HomePage() {
         <h2 className="text-2xl font-bold">Ecosystem</h2>
         <div className="mt-5 grid gap-3 md:grid-cols-2">
           {siteConfig.ecosystem.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-xl border border-slate-200 bg-white p-4 hover:border-brand"
-            >
+            <Link key={item.name} href={item.href} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-brand">
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </section>

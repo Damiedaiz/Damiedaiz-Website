@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { PageShell } from '@/components/page-shell';
 import { siteConfig } from '@/lib/site-config';
 
@@ -48,9 +49,9 @@ export default function WorkWithMePage() {
                 <li key={d}>{d}</li>
               ))}
             </ul>
-            <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer" className="mt-5 inline-block rounded-lg bg-brand px-4 py-2 font-semibold text-white">
+            <Link href={siteConfig.calendlyUrl} className="mt-5 inline-block rounded-lg bg-brand px-4 py-2 font-semibold text-white">
               Book a Clarity Call
-            </a>
+            </Link>
           </article>
         ))}
       </div>

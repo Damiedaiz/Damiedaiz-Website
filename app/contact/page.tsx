@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { ContactForm } from '@/components/contact-form';
 import { PageShell } from '@/components/page-shell';
 import { siteConfig } from '@/lib/site-config';
@@ -17,12 +18,12 @@ export default function ContactPage() {
         <ContactForm />
         <div className="space-y-4 rounded-xl border border-slate-200 bg-white p-6">
           <h2 className="text-xl font-semibold">Direct options</h2>
-          <a href={siteConfig.whatsappUrl} target="_blank" rel="noreferrer" className="block text-brand underline">
+          <Link href={siteConfig.whatsappUrl} className="block text-brand underline">
             Chat on WhatsApp
-          </a>
-          <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer" className="block text-brand underline">
+          </Link>
+          <Link href={siteConfig.calendlyUrl} className="block text-brand underline">
             Book a Clarity Call
-          </a>
+          </Link>
         </div>
       </div>
     </PageShell>
